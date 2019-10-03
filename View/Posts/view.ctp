@@ -123,18 +123,21 @@
 						<img src="/cakephp/img/next.png" alt="" class="next_btn">
 					</div>
 				<?php } ?>
+				<h2 class="mt-5 mb-1">関連記事</h2>
 				<div class="row">
 					<?php foreach ($relatedArticles as $relatedArticle) : ?>
 						<?php $id = $relatedArticle['Post']['id']; ?>
 						<div class="col-sm-6 col-md-3 related-card">
 							<div class="card img-thumbnail">
 								<?php
-									//サムネイルの表示
-									$thumbName = $relatedArticle['Thumbnail']['thumbnailimage'];
-									$thumbPath = $relatedArticle['Thumbnail']['dir'];
-									$base_ = "/files/thumbnail/thumbnailimage/";
+									if (!empty($relatedArticle['Thumbnail'])) :
+										//サムネイルの表示
+										$thumbName = $relatedArticle['Thumbnail']['thumbnailimage'];
+										$thumbPath = $relatedArticle['Thumbnail']['dir'];
+										$base_ = "/files/thumbnail/thumbnailimage/";
+									endif;
 									?>
-								<?php if ($thumbName !== null) :	?>
+								<?php if (!empty($relatedArticle['Thumbnail'])) :	?>
 									<a href=<?php echo "http://blog.dev1/cakephp/posts/view/${id}" ?> class="text-dark">
 										<img class="card-img-top related-card-img" src=<?php echo "/cakephp/" . $base_ . $thumbPath . DS . 'normal_' . $thumbName; ?> alt="画像">
 									</a>

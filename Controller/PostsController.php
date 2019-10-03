@@ -2,7 +2,6 @@
 App::uses('AppController', 'Controller');
 App::uses('File', 'Utility');
 App::uses('Folder', 'Utility');
-App::import('Controller', 'Images');
 /**
  * Posts Controller
  *
@@ -212,11 +211,6 @@ class PostsController extends AppController
 
 	public function csvupload()
 	{
-		// $this->loadModel('Zipcode');
-		// $updateRecord = $this->Zipcode->query("SELECT * FROM zipcode as Zipcode WHERE zipcode = 9792709;");
-		// debug($updateRecord[0]['Zipcode']);
-		// $tableType = $this->Zipcode->getColumnTypes();
-		// debug($tableType);
 		$this->_setTables();
 	}
 
@@ -419,14 +413,15 @@ class PostsController extends AppController
 		$this->set(compact('tableList'));
 	}
 
+
 	public function _setRelatedArticle($post)
 	{
 		$categoryId = $post['Category']['id'];
-		$tagId = $post['Tag'][0]['id'];
 		$tagsId = array('OR' => array());
 		foreach ($post['Tag'] as $tags) {
 			array_push($tagsId['OR'], array('PostsTag.tag_id' => $tags['id']));
 		}
+
 		// こういう形
 		// $or = array(
 		// 	'OR' => array(
@@ -436,9 +431,10 @@ class PostsController extends AppController
 		// 	)
 		// );
 
-		// debug($or);
+
 		// 関連記事取得(同一カテゴリーでタグがどれかに当てはまれば取ってくる)
 		$relatedArticles = $this->Post->find('all', array(
+			'fields' => 'DISTINCT *',
 			'conditions' => array(
 				'Category.id' => $categoryId,
 				'NOT' => array('Post.id' => $post['Post']['id']),
@@ -451,12 +447,33 @@ class PostsController extends AppController
 					'conditions' => array(
 						$tagsId,
 						'PostsTag.post_id = Post.id'
-					)
+					),
 				)
 			),
-			'contain' => array('Category', 'Thumbnail', 'Tag')
+			'contain' => array('Category', 'Thumbnail', 'Tag'),
+			'recursive' => 2
 		));
+		$articlePostsCount = 8;
+		// 関連記事が８つ以下ならカテゴリーだけと同じな記事も取得する
+		if (count($relatedArticles) < $articlePostsCount) {
+			$postsId = array('NOT' => array());
+			foreach ($relatedArticles as $posts) {
+				array_push($postsId['NOT'], array('Post.id' => $posts['Post']['id']));
+			}
+			$addRelatedArticles =  $this->Post->find('all', array(
+				'fields' => 'DISTINCT *',
+				'conditions' => array(
+					'Category.id' => $categoryId,
+					'NOT' => array('Post.id' => $post['Post']['id']),
+					$postsId
+				),
+				'contain' => array('Category', 'Thumbnail', 'Tag'),
+				'recursive' => 2
+			));
+			$relatedArticles = array_merge($relatedArticles, $addRelatedArticles);
+		}
 
+		$relatedArticles = array_slice($relatedArticles, 0, $articlePostsCount);
 		$this->set('relatedArticles', $relatedArticles);
 	}
 

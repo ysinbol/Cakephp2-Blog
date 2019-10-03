@@ -18,6 +18,7 @@ class Post extends AppModel
 		array('name' => 'keyword', 'type' => 'subquery', 'method' => 'multiWordSearch', 'field' => 'Post.id'),
 	);
 
+
 	// filterArgsで設定されたこのメソッドに飛ばされる。
 	public function multiWordSearch($data = array())
 	{
