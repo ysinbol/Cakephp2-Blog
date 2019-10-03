@@ -1,0 +1,101 @@
+.popupbg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.popup_wrapper {
+  width: 500px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -250px;
+  z-index: 11;
+  text-align: center;
+  display: none;
+}
+
+.popup_wrapper .popup {
+  position: relative;
+}
+
+.popup_wrapper .img {
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+  border: 10px white solid;
+  border-radius: 9px;
+}
+
+.popup_wrapper .caption {
+  padding: 10px;
+  font-size: 18px;
+  color: #FFF;
+  float: left;
+}
+
+.popup_wrapper .next_btn {
+  /* top: 40%; */
+  right: 0;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.popup_wrapper .prev_btn {
+  /* top: 40%; */
+  left: 0;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.background-img {
+  background-color: white;
+  z-index: 10;
+  display: none;
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -250px;
+  border: 10px white solid;
+  border-radius: 9px;
+}
+
+.close_image {
+  width: 35px;
+  float: right;
+  padding-bottom: 0.7em;
+  outline: none;
+  margin-top: 0.7em;
+}
+
+/* line 117, ../sass/lightbox.sass */
+
+.close_image:hover {
+  cursor: pointer;
+}
+
+.spiner_wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  z-index: 12;
+  display: none;
+}
+
+.spiner_wrapper .spiner {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

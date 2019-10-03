@@ -1,0 +1,419 @@
+/* stylelint-disable selector-list-comma-newline-after */
+
+.header-color {
+  width: 100%;
+  background-color: white;
+}
+
+.blog-header {
+  line-height: 1;
+  position: relative;
+  background-color: white;
+}
+
+.header-border {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* font-family: "Playfair Display", Georgia, "Times New Roman", serif; */
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.view-title {
+  font-size: 1.9em;
+  max-width: 710px;
+}
+
+.body-text {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+@media (min-width: 768px) {
+  .h-md-250 {
+    height: 250px;
+  }
+}
+
+/*
+ * Blog name and description
+ */
+
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Pagination */
+
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+
+.blog-pagination>.btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 4rem;
+}
+
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2rem;
+}
+
+.blog-post-meta {
+  font-size: 0.8em;
+  /* color: #999; */
+  color: gray;
+}
+
+.blog-post:hover {
+  cursor: pointer;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.card-bottom-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-size: 1.9rem;
+}
+
+.card-body {
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.card-body-text {
+  /* position: absolute;
+  bottom: 15%;
+  left: 0;
+  padding-left: 20px;
+  margin-bottom: 32px; */
+}
+
+/* ファイル選択 */
+
+.custom-file {
+  overflow: hidden;
+}
+
+.custom-file-label {
+  white-space: nowrap;
+}
+
+image {
+  margin-top: 2em;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+.search_form {
+  display: none;
+}
+
+input.search_input {
+  width: 200px;
+}
+
+.csv-loader, .alert-uploaded {
+  display: none;
+}
+
+.category-link, .tag-link, .category-link-nav {
+  cursor: pointer;
+}
+
+.category-link:hover {
+  /* opacity: 0.75; */
+  background-color: #0087b8;
+}
+
+.tag-link:hover {
+  opacity: 0.75;
+  background-color: gray;
+}
+
+.category-link-nav:hover {
+  text-decoration: underline;
+}
+
+.edit {
+  float: right;
+  font-size: 0.9em;
+  color: gray;
+}
+
+.edit:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
+.category-link:nth-child(even) {}
+
+#uploadCansel {
+  display: none;
+}
+
+.add-title {
+  width: 500px;
+}
+
+.user-view {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  justify-content: center;
+}
+
+.profile-view {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  margin: 2em auto 0;
+}
+
+.profile {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input.introduction {
+  height: 200px;
+  width: 100%;
+  size: 50px;
+}
+
+.related-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 関連記事カード */
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.img-thumbnail {
+  border: none;
+}
+
+.linkadress {
+  position: absolute;
+  bottom: 0;
+}
+
+.related-card-img {
+  max-width: 165px;
+  max-height: 86px;
+}
+
+.related-card {
+  height: 190px;
+  margin-top: 1em;
+}
+
+.realated-card-body {
+  padding: 8px 4px 0px;
+}
+
+@media (min-width: 500px) {
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+@media(max-width:768px) {
+  .header_items .item_search {
+    order: 3;
+  }
+  .header_items .item_text {
+    order: 2;
+  }
+  .header_items .item_buttons {
+    order: 1;
+  }
+  .loginOrlogout {
+    float: right;
+  }
+  .signup {
+    float: left;
+  }
+  .item_search {
+    justify-content: center;
+    margin: 2em 0 1em 0;
+  }
+  #search svg {
+    display: inline;
+  }
+  input.search_input {
+    width: 200px;
+  }
+  .search_form {
+    display: inline;
+  }
+  .post-list {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media(max-width:1200px) and (min-width: 768px) {
+  input.search_input {
+    width: 165px;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card-body {
+    padding: 10px 20px 10px;
+  }
+}
+
+@media(max-width:1024px) and (min-width: 768px) {
+  #search svg {
+    display: none;
+  }
+  .search_form {
+    display: inline;
+  }
+  .post-list {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media(max-width:990px) and (min-width: 768px) {
+  .card-body {
+    /* margin-top: -6px; */
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+  .card-text .card-body-text {
+    margin: -15px 0 0;
+    font-size: 0.8rem;
+  }
+}
