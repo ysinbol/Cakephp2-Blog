@@ -123,7 +123,12 @@
 						<img src="/cakephp/img/next.png" alt="" class="next_btn">
 					</div>
 				<?php } ?>
-				<h2 class="mt-5 mb-1">関連記事</h2>
+				<?php if (!empty($relatedArticles)) : ?>
+					<h2 class="mt-5 mb-1">関連記事</h2>
+				<?php else : ?>
+					<h2 class="mt-5 mb-1">関連記事はありません</h2>
+				<?php endif; ?>
+
 				<div class="row">
 					<?php foreach ($relatedArticles as $relatedArticle) : ?>
 						<?php $id = $relatedArticle['Post']['id']; ?>

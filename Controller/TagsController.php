@@ -90,7 +90,6 @@ class TagsController extends AppController
 		$this->set('posts', $posts);
 
 		$postsCount = $this->Tag->Post->find('count', $conditions);
-		debug($postsCount);
 		$this->_setisPaginationDisplay($postsCount);
 	}
 

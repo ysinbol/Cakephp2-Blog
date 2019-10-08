@@ -82,8 +82,14 @@ class PostsController extends AppController
 		$user = $this->Post->User->find('first', array('conditions' => array('User.id' => $user_id), 'recursive' => 1, 'contain' => 'Profileimage'));
 
 		$this->set('user', $user);
-
 		$this->_setRelatedArticle($post);
+
+		$this->paginate = array(
+			'conditions' => $this->Post->parseCriteria($this->passedArgs),
+			'order' => array('id' => 'desc'),
+			'limit' => $this->paginateLimit,
+		);
+		$this->set('posts', $this->paginate());
 	}
 
 	/**
@@ -109,6 +115,7 @@ class PostsController extends AppController
 					'plugin' => 'BoostCake',
 					'class' => 'alert-success'
 				));
+
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->log($this->Post->validationErrors, LOG_DEBUG);

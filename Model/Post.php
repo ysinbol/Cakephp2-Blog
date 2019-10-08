@@ -98,33 +98,6 @@ class Post extends AppModel
 				'message'  => 'タグを選択して下さい',
 			)
 		),
-		// 'Image' => array(
-		// 		// 'upload-file' => array(
-		// 		// 		'rule' => array('uploadError'),
-		// 		// 		'message' => array('Error uploading file')
-		// 	  //  ),
-
-		// 		'extension' => array(
-		// 				'rule' => array('extension', array(
-		// 						'jpg','jpeg','png','gif','') // 拡張子を配列で定義
-		// 				),
-		// 				'message' => array('ファイル形式が間違っています。')
-		// 		 ),
-
-		// 		// 'mimetype' => array(
-		// 		// 		 'rule' => array('mimeType', array(
-		// 		// 					'image/jpeg','image/png', 'image/gif')
-		// 		// 			),
-		// 		// 			'message' => array('MIME type error')
-		// 		//  ),
-
-		// 		 'size' => array(
-		// 				'maxFileSize' => array(
-		// 						'rule' => array('fileSize', '<=', '10MB'), // 10MB以下
-		// 						'message' => array('file size error')
-		// 			),
-		// 		),
-		//  ),
 	);
 
 	// The Associations below have been created with all possible keys, those that are not needed can be removed

@@ -330,6 +330,89 @@ input.introduction {
   padding: 8px 4px 0px;
 }
 
+/* 記事ランキング */
+
+.ranking {
+  counter-reset: chapter;
+  list-style-type: none;
+}
+
+.ranking li {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  /* border-bottom: 1px dashed #cde2e8; */
+}
+
+.ranking li:before {
+  content: counter(chapter) " 位";
+  counter-increment: chapter;
+  margin: 0 5px 0 0;
+  padding: 10px;
+  border-radius: 50px;
+  background: gold;
+  color: #fff;
+  text-align: center;
+}
+
+.ranking li:nth-child(2n):before {
+  background: silver;
+}
+
+.ranking li:nth-child(3n):before {
+  background: burlywood;
+}
+
+.rank-thumbnailimg {
+  width: 120px;
+  height: 80px;
+  margin: 0px 10px 0px 0px;
+}
+
+.rank-1:before {
+  content: "1";
+  color: #e3b72a;
+}
+
+.rank-2:before {
+  content: "2";
+  color: #989898;
+}
+
+.rank-3:before {
+  content: "3";
+  color: #b47950;
+}
+
+.rank-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: block;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #b2b2b2;
+  font-size: 16px;
+}
+
+.ranking-list {
+  padding: 10px 10px;
+}
+
+.rank-title {
+  font-weight: 350;
+  border-top: 1px solid #242527;
+  border-bottom: 1px solid #dfe5e7;
+  padding: .4em 0;
+  margin-bottom: 1em;
+  color: #242527;
+}
+
 @media (min-width: 500px) {
   .thumbnail {
     width: 100%;
