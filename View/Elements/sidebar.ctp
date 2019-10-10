@@ -21,7 +21,6 @@
 
         <h5 class="mb-1 rank-title">人気の記事</h5>
         <a href="#" class="list-group-item list-group-item-action d-flex ranking-list">
-
           <div class="d-inline-block position-relative">
             <div class="rank-item rank-1"> </div>
             <?php
@@ -41,7 +40,7 @@
             </small>
           </div>
         </a>
-        <a href="#" class="list-group-item list-group-item-action ranking-list">
+        <a href="#" class="list-group-item list-group-item-action d-flex ranking-list">
           <div class="d-inline-block position-relative">
             <div class="rank-item rank-2"> </div>
             <?php
@@ -61,7 +60,7 @@
             </small>
           </div>
         </a>
-        <a href="#" class="list-group-item list-group-item-action ranking-list">
+        <a href="#" class="list-group-item list-group-item-action d-flex ranking-list">
           <div class="d-inline-block position-relative">
             <div class="rank-item rank-3"> </div>
             <?php

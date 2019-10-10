@@ -78,7 +78,6 @@ class PostsController extends AppController
 		//サイドバーのユーザー情報
 		$user_id = $this->Post->query("SELECT user_id from posts where id = ${id};");
 		$user_id = $user_id[0]['posts']['user_id'];
-
 		$user = $this->Post->User->find('first', array('conditions' => array('User.id' => $user_id), 'recursive' => 1, 'contain' => 'Profileimage'));
 
 		$this->set('user', $user);
@@ -507,42 +506,11 @@ class PostsController extends AppController
 			// saveAllする配列
 			$updateItemData = array();
 
-			$id = 0;
-
-
-
-			// データ取得
-			// while ($row = fgetcsv($fp)) {
-			// 	// 	// カラム数が異なっていたらエラー
-			// 	$difference = count($tableType) - count($row);
-			// 	if ($difference != 1) {
-			// 		$errorText = 'テーブルのカラム数とインポートするcsvデータのカラム数が異なっています。csvファイルを確認して下さい。';
-			// 		$isError = true;
-			// 		return json_encode(array('text' =>  $errorText, 'error' => $isError));
-			// 		throw new RuntimeException('Invalid column detected');
-			// 	}
-
-			// 	// 	// 1レコード分の配列
-			// 	$record = array();
-			// 	// 添字
-			// 	$i = 0;
-			// 	$id++;
-			// 	// 一括保存用に整形
-			// 	foreach ($tableType as $key => $value) {
-			// 		if ($key === 'id') {
-			// 			$record[$key] = $id;
-			// 			continue;
-			// 		}
-			// 		$record[$key] = $row[$i++];
-			// 	}
-			// 	$updateItemData['Zipcode'][] = $record;
-			// }
-
 			while ($row = fgetcsv($fp)) {
 
 				$zipcode = $row[2];
 				$record = array();
-				$updateRecord = $this->Zipcode->query("SELECT * FROM zipcode as Zipcode WHERE zipcode = ${zipcode};");
+				$updateRecord = $this->Zipcode->query("SELECT * FROM zipcode as Zipcode WHERE zipcode = ${zipcode} limit 1;");
 
 				// flag14が2の場合は削除(2は廃止データ)
 				$isDelete = $row[13] == 2;
@@ -552,8 +520,8 @@ class PostsController extends AppController
 				}
 
 				$i = 0;
-				$id = $updateRecord[0]['Zipcode']['id'];
 				if (!empty($updateRecord)) {
+					$id = $updateRecord[0]['Zipcode']['id'];
 					foreach ($updateRecord[0]['Zipcode'] as $key => $value) {
 						if ($key === 'id') {
 							$updateRecord[$key] = $id;
@@ -574,7 +542,8 @@ class PostsController extends AppController
 
 			$time = microtime(true) - $time_start;
 			if (empty($updateItemData)) {
-				return json_encode("CSVインポートを完了しました${time}", false);
+				// return json_encode("CSVインポートを完了しました${time}", false);
+				return json_encode($time);
 			}
 			//一括保存
 			if (!$this->Zipcode->saveAll($updateItemData['Zipcode'])) {
@@ -582,21 +551,5 @@ class PostsController extends AppController
 			}
 			return json_encode("CSVインポートを完了しました${time}", false);
 		}
-	}
-
-	public function ajax_setTags()
-	{
-		$this->autoRender = false;
-		if (!$this->request->is('ajax')) {
-			throw new BadRequestException();
-		}
-		$this->Post->Tag->create();
-		$tagName = $this->request->data['value'];
-
-		$this->Post->Tag->save($data);
-		$tags = $this->Post->Tag->find('list');
-		$this->set(compact('tags'));
-
-		return json_encode($tagName);
 	}
 }

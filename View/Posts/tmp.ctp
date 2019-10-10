@@ -13,7 +13,34 @@ SELECT DISTINCT city FROM zipcode ORDER BY city ASC limit 10;
 SELECT DISTINCT city FROM zipcode WHERE pref = '沖縄県' ;
 SELECT DISTINCT street FROM zipcode WHERE city = '石垣市' ;
 
-
+LOAD DATA LOCAL INFILE '/home/testTempfolder/x-ken-all.csv'
+INTO TABLE zipcode
+FIELDS
+TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY ''
+LINES
+STARTING BY ''
+TERMINATED BY '\r\n'
+(
+jiscode,
+zipcode_old,
+zipcode,
+pref_kana,
+city_kana,
+street_kana,
+pref,
+city,
+street,
+flag1,
+flag2,
+flag3,
+flag4,
+flag5,
+flag6
+);
+ALTER TABLE zipcode ADD INDEX zipcode(zipcode)
+LOAD DATA LOCAL INFILE '/home/testTempfolder/x-ken-all.csv' IGNORE INTO TABLE zipcode FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
 SELECT
 zipcode,
 jiscode
@@ -23,6 +50,8 @@ jiscode
 FROM zipcode
 WHERE
 jiscode = 07561;
+
+truncate table zipcode;
 
 CREATE TABLE test (
 id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

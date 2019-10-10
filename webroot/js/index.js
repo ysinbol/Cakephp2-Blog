@@ -50,13 +50,6 @@ $(document).ready(function () {
     ajax_addTag(e);
   });
 
-  // タグ・カテゴリーのリンク
-  // $('.category-link,.tag-link,.category-link-nav').on('click', function (e) {
-  //   var text = $(this).text().replace(/\s+/g, "");
-  //   $('#PostKeyword').val(text);
-  //   $('#PostIndexForm').submit();
-  // });
-
   $('.blog-post').on('click', function () {
     var url = $(this).attr('href');
     window.location.href = url;
@@ -234,7 +227,7 @@ function setPopupStyle(popup_wrapper, img, imgSize) {
 // アップロードされた画像をリサイズしてサムネイル表示
 function resizeImageDisplayThumbnail() {
   // アップロードするファイルを選択
-  $('input[type=file]').change(function () {
+  $('.profile').change(function () {
     var file = $(this).prop('files')[0];
 
     // 画像以外は処理を停止
@@ -317,6 +310,7 @@ function ajax_displayLoadingCsv(params) {
     })
       .done(function (data, textStatus, errorThrown) {
         $('.csv-loader').hide();
+        console.log(data);
         if (data['error']) {
           alert(data['text']);
           return;
@@ -333,22 +327,4 @@ function ajax_displayLoadingCsv(params) {
     });
 
   });
-
-
-}
-
-function ajax_addTag(e) {
-  var tagName = $('.tagCreate').val();
-  $.ajax({
-    url: "http://blog.dev1/cakephp/posts/ajax_setTags",
-    type: "POST",
-    data: { value: tagName },
-    dataType: "json"
-  })
-    .done(function (data, textStatus, errorThrown) {
-
-    })
-    .fail(function (jqXHR, textStatus, errorThrown) {
-
-    });
 }

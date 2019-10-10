@@ -31,11 +31,11 @@ class User extends AppModel
 		'password' => array(
 			'notBlank' => array(
 				'rule' => array('notBlank'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'message' => 'パスワードを入力して下さい。',
+			),
+			'custom' => array(
+				'rule' => array('custom', '/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i'),
+				'message' => '半角英数字を組み合わせて8文字以上にして下さい'
 			),
 		),
 		'group_id' => array(
@@ -46,6 +46,12 @@ class User extends AppModel
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'zipcode' => array(
+			'custom' => array(
+				'rule' => array('custom', '/^(?=.*[0-9])(?=.*d{7})/'),
+				'message' => '郵便番号は半角数字で7桁で指定して下さい'
 			),
 		),
 		'extension' => array(

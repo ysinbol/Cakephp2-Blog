@@ -1,4 +1,3 @@
-<?php echo $this->Session->flash(); ?>
 <?php echo $this->Form->create(
 	'Post',
 	array('type' => 'file', 'entype' => 'multipart/form-data')
@@ -30,14 +29,6 @@
 	));
 	?>
 
-	<!-- <div class="input-group search_wrapper">
-		<? php // echo $this->Form->input('TagName', array('label' => false, 'placeholder' => 'タイトル・タグ・カテゴリー', "class" => "tagCreate"));
-		?>
-		<div class="input-group-append ">
-			<? php // echo $this->Form->submit('追加', array("class" => "btn btn-sm btn-outline-secondary addTag"));
-			?>
-		</div>
-	</div> -->
 
 	<h2>画像の投稿</h2>
 
@@ -66,8 +57,6 @@
 		<?php echo $this->Form->submit(__('記事を投稿する'), array("class" => "btn btn-outline-primary rounded-pill mt-5")); ?>
 	</div>
 </div>
-
-
 
 
 <style>

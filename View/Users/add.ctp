@@ -32,8 +32,11 @@ echo $this->Form->create('User', array(
 			</div>
 			<div class="row">
 				<div class="col-6">
-					<label class="sr-only">郵便番号 -(ハイフン)なしで入力</label>
-					<input name="data[User][zipcode]" id="zipcode" class="form-control " placeholder="郵便番号" required>
+					<?php echo $this->Form->input('zipcode', array(
+						'class' => 'form-control mb-4', 'placeholder' => '郵便番号', 'style' => 'margin-bottom: 1em', 'label' => false, 'id' => 'zipcode', 'type' => 'text'
+					)); ?>
+					<!-- <label class="sr-only">郵便番号 -(ハイフン)なしで入力</label>
+					<input name="data[User][zipcode]" id="zipcode" class="form-control " placeholder="郵便番号" required> -->
 				</div>
 				<div class="col-6">
 					<?php

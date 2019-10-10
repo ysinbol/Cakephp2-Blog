@@ -39832,3 +39832,458 @@ Request URL: /cakephp/files/attachment/attachment/254/normal_test.png
 Stack Trace:
 #0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2019-10-08 18:13:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/285/normal_test4.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-08 18:13:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/283/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-08 18:13:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/284/normal_test3.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-08 18:13:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/286/normal_test5.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 11:00:57 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/229/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/274/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:06 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/246/normal_test3.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:06 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/245/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:06 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/244/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:06 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/247/normal_test4.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/254/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/255/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:16 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/255/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:16 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/254/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:17 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/216/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:21 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/227/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:12:27 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/227/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:17:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/308/normal_test3.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:17:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/310/normal_test5.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:17:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/309/normal_test4.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:17:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/311/normal_test06_sakura.jpg
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:24:40 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/248/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:24:40 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/253/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 12:24:40 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/252/normal_test06_sakura.jpg
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 17:14:25 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/305/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-09 17:14:25 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/307/normal_test4.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 12:01:20 Error: [MissingControllerException] Controller class CakephpController could not be found.
+Exception Attributes: array (
+  'class' => 'CakephpController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/cakephp/
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 12:01:46 Error: [MissingControllerException] Controller class CakephpController could not be found.
+Exception Attributes: array (
+  'class' => 'CakephpController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/cakephp/
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 12:02:18 Error: [MissingControllerException] Controller class CsvuploadController could not be found.
+Exception Attributes: array (
+  'class' => 'CsvuploadController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/csvupload
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 12:02:28 Error: [MissingControllerException] Controller class CakephpController could not be found.
+Exception Attributes: array (
+  'class' => 'CakephpController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/cakephp/
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 12:47:54 Error: Fatal Error (1): Allowed memory size of 1073741824 bytes exhausted (tried to allocate 72 bytes) in [/var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php, line 2087]
+2019-10-10 12:47:54 Error: [FatalErrorException] Allowed memory size of 1073741824 bytes exhausted (tried to allocate 72 bytes)
+Request URL: /cakephp/posts/ajax_UploadCsv
+Stack Trace:
+#0 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/html/c...', 2087)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#2 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#3 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2019-10-10 12:50:29 Error: [PDOException] SQLSTATE[08S01]: Communication link failure: 1053 Server shutdown in progress
+Request URL: /cakephp/posts/ajax_UploadCsv
+Stack Trace:
+#0 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php(1226): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Model.php(3053): DboSource->read(Object(Zipcode), Array)
+#5 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Model.php(3025): Model->_readDataSource('count', Array)
+#6 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Model.php(2935): Model->find('count', Array)
+#7 /var/www/html/cakephp/app/Model/AppModel.php(41): Model->exists('15201')
+#8 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/ModelValidator.php(260): AppModel->exists('15201')
+#9 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/ModelValidator.php(99): ModelValidator->errors(Array)
+#10 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Model.php(3502): ModelValidator->validates(Array)
+#11 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/ModelValidator.php(214): Model->validates(Array)
+#12 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Model.php(2413): ModelValidator->validateMany(Array, Array)
+#13 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Model.php(2330): Model->validateMany(Array, Array)
+#14 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Model.php(2280): Model->saveMany(Array, Array)
+#15 /var/www/html/cakephp/app/Controller/PostsController.php(553): Model->saveAll(Array)
+#16 [internal function]: PostsController->ajax_UploadCsv()
+#17 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#18 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#19 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#20 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2019-10-10 12:51:44 Error: Fatal Error (1): Allowed memory size of 1073741824 bytes exhausted (tried to allocate 892 bytes) in [/var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Utility/Debugger.php, line 557]
+2019-10-10 12:51:44 Error: [FatalErrorException] Allowed memory size of 1073741824 bytes exhausted (tried to allocate 892 bytes)
+Request URL: /cakephp/posts/ajax_UploadCsv
+Stack Trace:
+#0 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/html/c...', 557)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/html/c...', 557, Array)
+#2 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/html/c...', 557, Array)
+#3 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2019-10-10 12:56:49 Error: Fatal Error (1): Allowed memory size of 1073741824 bytes exhausted (tried to allocate 128 bytes) in [/var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php, line 2087]
+2019-10-10 12:56:49 Error: [FatalErrorException] Allowed memory size of 1073741824 bytes exhausted (tried to allocate 128 bytes)
+Request URL: /cakephp/posts/ajax_UploadCsv
+Stack Trace:
+#0 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/html/c...', 2087)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#2 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#3 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2019-10-10 13:06:10 Error: Fatal Error (1): Allowed memory size of 1073741824 bytes exhausted (tried to allocate 77 bytes) in [/var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php, line 2087]
+2019-10-10 13:06:10 Error: [FatalErrorException] Allowed memory size of 1073741824 bytes exhausted (tried to allocate 77 bytes)
+Request URL: /cakephp/posts/ajax_UploadCsv
+Stack Trace:
+#0 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/html/c...', 2087)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#2 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#3 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2019-10-10 13:17:06 Error: Fatal Error (1): Allowed memory size of 1073741824 bytes exhausted (tried to allocate 78 bytes) in [/var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php, line 2087]
+2019-10-10 13:17:06 Error: [FatalErrorException] Allowed memory size of 1073741824 bytes exhausted (tried to allocate 78 bytes)
+Request URL: /cakephp/posts/ajax_UploadCsv
+Stack Trace:
+#0 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/html/c...', 2087)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#2 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#3 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2019-10-10 13:33:23 Error: Fatal Error (1): Allowed memory size of 1073741824 bytes exhausted (tried to allocate 83 bytes) in [/var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php, line 2087]
+2019-10-10 13:33:23 Error: [FatalErrorException] Allowed memory size of 1073741824 bytes exhausted (tried to allocate 83 bytes)
+Request URL: /cakephp/posts/ajax_UploadCsv
+Stack Trace:
+#0 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/html/c...', 2087)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#2 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#3 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2019-10-10 13:39:22 Error: Fatal Error (1): Allowed memory size of 1073741824 bytes exhausted (tried to allocate 79 bytes) in [/var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Model/Datasource/DboSource.php, line 2087]
+2019-10-10 13:39:22 Error: [FatalErrorException] Allowed memory size of 1073741824 bytes exhausted (tried to allocate 79 bytes)
+Request URL: /cakephp/posts/ajax_UploadCsv
+Stack Trace:
+#0 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/html/c...', 2087)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#2 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/html/c...', 2087, Array)
+#3 /var/www/html/cakephp/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2019-10-10 15:20:41 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/289/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:20:42 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/290/normal_test3.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:20:42 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/291/normal_test4.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:20:42 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/293/normal_test06_sakura.jpg
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:20:42 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/288/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:20:42 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/292/normal_test5.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:30:07 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/216/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:32:32 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/221/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:32:35 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/221/normal_test2.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-10-10 15:33:48 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/files/attachment/attachment/225/normal_test.png
+Stack Trace:
+#0 /var/www/html/cakephp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
