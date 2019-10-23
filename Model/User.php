@@ -50,8 +50,8 @@ class User extends AppModel
 		),
 		'zipcode' => array(
 			'custom' => array(
-				'rule' => array('custom', '/^(?=.*[0-9])(?=.*d{7})/'),
-				'message' => '郵便番号は半角数字で7桁で指定して下さい'
+				'rule' => array('custom', '/^[0-9]{7}$/'),
+				'message' => '郵便番号は半角数字7桁で指定して下さい'
 			),
 		),
 		'extension' => array(

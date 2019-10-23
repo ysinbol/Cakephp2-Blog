@@ -26,6 +26,9 @@
 				</div>
 
 				<div class="col-md-4 pt-1 d-md-flex justify-content-md-end align-items-md-center item_buttons">
+					<a href=<?php echo $addUrl ?> class="btn-sm fas fa-pencil-alt mr-3 mb-n2 text-secondary">
+						記事を投稿する
+					</a>
 					<a class="btn btn-sm btn-outline-primary mr-2 loginOrlogout" href=<?php echo $linkAdress ?>><?php echo $btnStr ?></a>
 					<?php if (!$isLogin) { ?>
 						<a class="btn btn-sm btn-outline-secondary signup" href="http://blog.dev1/cakephp/users/add">Sign up</a>

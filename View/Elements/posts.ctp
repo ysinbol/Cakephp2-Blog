@@ -16,18 +16,7 @@
   <div class="row">
     <div class="col-md-8 blog-main">
 
-      <?php
-      if (!empty($this->params['pass'])) {
-        $addUrl = "http://blog.dev1/cakephp/posts/add/" . $this->params['pass'][0];
-      } else {
-        $addUrl = "http://blog.dev1/cakephp/posts/add/";
-      }
-      ?>
-      <a href=<?php echo $addUrl ?>>
 
-
-        <button class="btn-sm fas fa-pencil-alt float-right mt-4" style="text-color:white">記事を投稿する</button>
-      </a>
       <!-- <div class="border-bottom"></div> -->
       <br>
       <?php if (!empty($posts)) { ?>

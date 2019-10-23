@@ -89,6 +89,8 @@ class PostsController extends AppController
 			'limit' => $this->paginateLimit,
 		);
 		$this->set('posts', $this->paginate());
+		$post['Post']['accesscount'] += 1;
+		$this->Post->save($post);
 	}
 
 	/**

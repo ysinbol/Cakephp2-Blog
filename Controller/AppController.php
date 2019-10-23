@@ -21,7 +21,7 @@
  */
 
 App::uses('Controller', 'Controller');
-
+App::import('Vendor', 'accesslogs');
 /**
  * Application Controller
  *
@@ -62,9 +62,11 @@ class AppController extends Controller
 
   protected $paginateLimit = 5;
 
-
   public function beforeFilter()
   {
+    $this->access = new AccessLogs();
+    $this->access->write_log();
+
     // AuthComponent の設定
     $this->Auth->loginAction = array(
       'controller' => 'users',
@@ -80,25 +82,23 @@ class AppController extends Controller
     );
 
     $this->Auth->allow('display');
-
-    $this->_setCurrentUserStatus();
+    $this->set('paginateLimit', $this->paginateLimit);
 
 
     // ログインしているか
     $isLogin = $this->Auth->user('id') != 0 ? true : false;
     $this->set('isLogin', $isLogin);
-    $this->set('paginateLimit', $this->paginateLimit);
-
-    $this->paginate   = array(
-      'order' => array('id' => 'desc'),
-      'limit' => 5,
-    );
 
     $this->loadModel('User');
     $user = $this->User->find('first', array('conditions' => array('User.id' => $this->Auth->User('id'))));
     $this->set('user', $user);
+
+    $this->_setCurrentUserStatus();
+    $this->_setaddArticleUrl();
+    $this->_setArticleRanking();
   }
 
+  // ログイン状況のセット
   public function _setCurrentUserStatus()
   {
     $user_id = $this->Auth->user('id');
@@ -115,9 +115,30 @@ class AppController extends Controller
     $this->set('userId', $this->Auth->user('id'));
   }
 
+  // ページネーションを表示するかセット
   public function _setisPaginationDisplay($postsCount)
   {
     $isPaginationDisplay = $postsCount > $this->paginateLimit;
     $this->set('isPaginationDisplay', $isPaginationDisplay);
+  }
+
+  // 記事投稿URLのセット
+  public function _setaddArticleUrl()
+  {
+    if (!empty($this->params['pass'])) {
+      $addUrl = "http://blog.dev1/cakephp/posts/add/" . $this->params['pass'][0];
+    } else {
+      $addUrl = "http://blog.dev1/cakephp/posts/add/";
+    }
+
+    $this->set('addUrl', $addUrl);
+  }
+
+  // 記事ランキングをセット
+  public function _setArticleRanking()
+  {
+    $this->loadModel('Post');
+    $articleRanking = $this->Post->find('all', array('limit' => 3, 'order' => 'accesscount desc'));
+    $this->set('articleRanking', $articleRanking);
   }
 }
