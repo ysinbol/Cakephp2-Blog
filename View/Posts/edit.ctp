@@ -107,8 +107,9 @@ $photoCount = count($post['Attachment']);
 </div>
 </fieldset>
 <div class="row">
-	<div class="col-0 mx-auto">
-		<?php echo $this->Form->submit(__('記事を保存する'), array("class" => "btn btn-outline-primary rounded-pill mt-5")); ?>
+	<div class="col-0 mx-auto d-flex">
+		<?php echo $this->Form->submit(__('記事を保存する'), array("class" => "btn btn-outline-primary rounded-pill mt-5 mr-2")); ?>
+
 	</div>
 </div>
 </div>

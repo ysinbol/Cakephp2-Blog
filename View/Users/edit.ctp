@@ -67,6 +67,7 @@ echo $this->Form->create('User', array(
 			echo $this->Form->input('group_id', array('type' => 'hidden'));
 			?>
 			<button class=" btn btn-lg btn-success btn-block mt-4" type="submit">編集を保存</button>
+			<button class=" btn btn-lg btn-danger btn-block mt-4" type="submit">削除する</button>
 		</div>
 	</div>
 </div>

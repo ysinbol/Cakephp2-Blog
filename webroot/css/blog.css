@@ -136,7 +136,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-post-title {
   margin-bottom: .25rem;
-  font-size: 2rem;
 }
 
 .blog-post-meta {
@@ -183,7 +182,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-title {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
+  font-weight: normal;
 }
 
 .card-body {
@@ -351,7 +351,7 @@ input.introduction {
   padding: 10px;
   border-radius: 50px;
   background: gold;
-  color: #fff;
+  /* color: #fff; */
   text-align: center;
 }
 
@@ -369,19 +369,34 @@ input.introduction {
   margin: 0px 10px 0px 0px;
 }
 
+.rank-1 {
+  background-color: #e3b72a;
+}
+
+.rank-2 {
+  background-color: #989898;
+}
+
+.rank-3 {
+  background-color: #b47950;
+}
+
 .rank-1:before {
   content: "1";
-  color: #e3b72a;
+  color: white;
+  background-color: #e3b72a;
 }
 
 .rank-2:before {
   content: "2";
-  color: #989898;
+  color: white;
+  background-color: #989898;
 }
 
 .rank-3:before {
   content: "3";
-  color: #b47950;
+  color: white;
+  background-color: #b47950;
 }
 
 .rank-item {
@@ -395,7 +410,6 @@ input.introduction {
   height: 24px;
   line-height: 24px;
   font-weight: 700;
-  background-color: #fff;
   color: #b2b2b2;
   font-size: 16px;
 }

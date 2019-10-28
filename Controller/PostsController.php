@@ -91,6 +91,8 @@ class PostsController extends AppController
 		$this->set('posts', $this->paginate());
 		$post['Post']['accesscount'] += 1;
 		$this->Post->save($post);
+
+		$this->_poplularityCalculation($post);
 	}
 
 	/**
@@ -483,6 +485,15 @@ class PostsController extends AppController
 
 		$relatedArticles = array_slice($relatedArticles, 0, $articlePostsCount);
 		$this->set('relatedArticles', $relatedArticles);
+	}
+
+	public function _poplularityCalculation($post)
+	{
+		$todaysDate = new DateTime(date('Y-m-d'));
+		$postDate = new DateTime($post['Post']['created']);
+		$diff = $todaysDate->diff($postDate);
+
+		debug($diff->days);
 	}
 
 	public function ajax_UploadCsv()

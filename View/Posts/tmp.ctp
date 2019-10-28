@@ -65,7 +65,7 @@ ALTER TABLE users ADD zipcode INT(11) NOT NULL;
 ALTER TABLE users ADD pref VARCHAR(10) NOT NULL;
 ALTER TABLE zipcode MODIFY zipcode INT(11) NOT NULL;
 ALTER TABLE users MODIFY apartmentName VARCHAR(50) NOT NULL;
-ALTER TABLE posts ADD accesscount INT(11) DEFAULT 0;
+ALTER TABLE posts ADD popularity INT(11) DEFAULT 0;
 ALTER TABLE users ADD introduction VARCHAR(300);
 ALTER TABLE posts MODIFY deleted TINYINT(1);
 alter table profileimage drop introduction;

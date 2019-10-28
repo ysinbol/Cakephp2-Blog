@@ -20,8 +20,8 @@
       <!-- <div class="border-bottom"></div> -->
       <br>
       <?php if (!empty($posts)) { ?>
-        <h1 class="pb-4 mb-4 pt-4 text-center post-list">
-          投稿記事一覧
+        <h1 class="pb-4 mb-4 pt-4 ml-2 text-left post-list">
+          注目記事
         </h1>
       <?php } else { ?>
         <h1 class="pb-4 mt-4 pt-4 text-center post-list">
