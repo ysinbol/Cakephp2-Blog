@@ -20,11 +20,6 @@ class CategoriesController extends AppController
 	public function beforeFilter()
 	{
 		parent::beforeFilter();
-
-		// カテゴリー一覧
-		$this->set('categorieList', $this->Category->find('all', array(
-			'fields' => array('Category.name'),
-		)));
 		$this->Auth->allow('view');
 	}
 
@@ -63,6 +58,7 @@ class CategoriesController extends AppController
 		$this->loadModel('Post');
 		$this->Paginator->settings = array(
 			'conditions' => array('Post.categorie_id' => $id),
+			'order' => array('popularity' => 'desc'),
 			'limit' => $this->paginateLimit
 		);
 		$posts = $this->Paginator->paginate('Post');

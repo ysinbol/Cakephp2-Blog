@@ -14,19 +14,12 @@ class TagsController extends AppController
 	 *
 	 * @var array
 	 */
-	public $components = array('Paginator' => array(
-		'limit' => 5,
-		'maxLimit' => 5,
-		'order' => array('Hoge.modified' => 'desc')
-	), 'Search.Prg');
+	public $components = array('Paginator');
 	public $presetVars = true;
 
 	public function beforeFilter()
 	{
 		parent::beforeFilter();
-		$this->set('categorieList', $this->Tag->Post->Category->find('all', array(
-			'fields' => array('Category.name'),
-		)));
 		$this->Auth->allow('view');
 	}
 
@@ -83,6 +76,7 @@ class TagsController extends AppController
 					)
 				)
 			),
+			'order' => array('popularity' => 'desc'),
 		);
 
 		$this->Paginator->settings = $conditions;

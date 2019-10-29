@@ -90,12 +90,18 @@ class AppController extends Controller
     $this->set('isLogin', $isLogin);
 
     $this->loadModel('User');
+    $this->loadModel('Category');
+    $this->loadModel('Post');
+
     $user = $this->User->find('first', array('conditions' => array('User.id' => $this->Auth->User('id'))));
     $this->set('user', $user);
 
     $this->_setCurrentUserStatus();
     $this->_setaddArticleUrl();
     $this->_setArticleRanking();
+    $this->_setCategoriesList();
+    $this->_setCurrentCategoryName();
+    $this->_setNewArticles();
   }
 
   // ログイン状況のセット
@@ -137,8 +143,41 @@ class AppController extends Controller
   // 記事ランキングをセット
   public function _setArticleRanking()
   {
-    $this->loadModel('Post');
+
     $articleRanking = $this->Post->find('all', array('limit' => 3, 'order' => 'accesscount desc'));
     $this->set('articleRanking', $articleRanking);
+  }
+
+  public function _setCategoriesList()
+  {
+    // カテゴリー一覧
+    $this->set('categorieList', $this->Category->find('all', array(
+      'fields' => array('Category.name'),
+    )));
+  }
+
+  public function _setCurrentCategoryName()
+  {
+    if (empty($this->params['pass'][0])) {
+      $this->set('currentCategoryName', '');
+      return;
+    }
+    $currentCategoryName = $this->Category->find('first', array(
+      'conditions' => array('Category.id' => $this->params['pass'][0]),
+      'fields' => 'Category.name',
+      'recursive' => -1
+    ));
+    if (empty($currentCategoryName)) return;
+    $this->set('currentCategoryName', $currentCategoryName['Category']['name'] . '-');
+  }
+
+  public function _setNewArticles()
+  {
+    $newArticles = $this->Post->find('all', array(
+      'order' => array('Post.id' => 'desc'),
+      'limit' => $this->paginateLimit,
+    ));
+
+    $this->set('newArticles', $newArticles);
   }
 }

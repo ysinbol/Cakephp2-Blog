@@ -45,7 +45,7 @@ class PostsController extends AppController
 		// 検索条件のconditionsをpaginateに渡している。
 		$this->paginate = array(
 			'conditions' => $this->Post->parseCriteria($this->passedArgs),
-			'order' => array('id' => 'desc'),
+			'order' => array('popularity' => 'desc'),
 			'limit' => $this->paginateLimit,
 		);
 		$this->set('posts', $this->paginate());
@@ -89,8 +89,6 @@ class PostsController extends AppController
 			'limit' => $this->paginateLimit,
 		);
 		$this->set('posts', $this->paginate());
-		$post['Post']['accesscount'] += 1;
-		$this->Post->save($post);
 
 		$this->_poplularityCalculation($post);
 	}
@@ -489,11 +487,39 @@ class PostsController extends AppController
 
 	public function _poplularityCalculation($post)
 	{
+		// 投稿日時が何日経ってるかを計算
 		$todaysDate = new DateTime(date('Y-m-d'));
 		$postDate = new DateTime($post['Post']['created']);
 		$diff = $todaysDate->diff($postDate);
+		$accesscount = $post['Post']['accesscount'];
 
-		debug($diff->days);
+		switch ($diff->days) {
+			case 0:
+				$popularity = $accesscount * 4;
+				break;
+			case 1:
+				$popularity = $accesscount * 3;
+				break;
+			case 2:
+				$popularity = $accesscount * 2.25;
+				break;
+			case 3:
+				$popularity = $accesscount * 1.75;
+				break;
+			case $diff->days > 3 && $diff->days <= 7:
+				$popularity = $accesscount * 1.5;
+				break;
+			case $diff->days > 7 && $diff->days <= 30:
+				$popularity = $accesscount * 1.2;
+				break;
+			default:
+				$popularity = $accesscount;
+				break;
+		}
+
+		$post['Post']['accesscount'] += 1;
+		$post['Post']['popularity'] = $popularity;
+		$this->Post->save($post);
 	}
 
 	public function ajax_UploadCsv()
