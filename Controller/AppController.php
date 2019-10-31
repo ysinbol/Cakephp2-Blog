@@ -180,4 +180,19 @@ class AppController extends Controller
 
     $this->set('newArticles', $newArticles);
   }
+
+  // バリテーション エラーを全て表示する。
+  public function _displayValErrorMessage($validationErrors)
+  {
+    foreach ($validationErrors as $valErrors) {
+      foreach ($valErrors as $valError) {
+        // バリテーション エラーが無ければ表示しない
+        if ($valError === '') return;
+        $this->Session->setFlash(__($valError), 'alert', array(
+          'plugin' => 'BoostCake',
+          'class' => 'alert-danger'
+        ));
+      }
+    }
+  }
 }

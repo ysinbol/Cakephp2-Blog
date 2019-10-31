@@ -239,16 +239,12 @@ class UsersController extends AppController
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 		$user = $this->User->find('first', $options);
 		if ($this->request->is(array('post', 'put'))) {
-
-
 			// 画像ファイルであるかチェック
 			if (!$this->_isProfileImage($user)) {
 				return;
 			}
-
 			//サムネイル画像差替え
 			$this->_modfiyThumbnail($user);
-
 			if ($this->User->saveAll(($this->request->data))) {
 				$this->Session->setFlash(__('編集を保存しました。'), 'alert', array(
 					'plugin' => 'BoostCake',
@@ -257,10 +253,7 @@ class UsersController extends AppController
 
 				return $this->redirect(array('controller' => 'users', 'action' => "view/${id}"));
 			} else {
-				$this->Session->setFlash(__('保存できませんでした。'), 'alert', array(
-					'plugin' => 'BoostCake',
-					'class' => 'alert-danger'
-				));
+				$this->_displayValErrorMessage($this->User->validationErrors);
 			}
 		}
 

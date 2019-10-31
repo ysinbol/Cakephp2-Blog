@@ -51,9 +51,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 </head>
 <div class="container">
-	<?php echo $this->Session->flash(); ?>
+
 </div>
 <?php echo $this->element('header'); ?>
+<?php echo $this->Session->flash(); ?>
 
 <body>
 	<div id="container">

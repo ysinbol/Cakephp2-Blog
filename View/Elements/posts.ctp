@@ -1,3 +1,4 @@
+<?php App::import('Vendor', 'util/datecalc'); ?>
 <!-- メニューバー -->
 <div class="nav-scroller py-1 mb-2 ">
   <nav class="nav d-flex justify-content-between">
@@ -64,7 +65,9 @@
                     <small class="text-muted card-bottom-text">
                       <?php
                         $date = $post_['Post']['created'];
-                        echo date('Y-m-d', strtotime(str_replace('-', '/', $date)));
+                        $dateCalc = new util\DateCalc();
+                        echo $dateCalc->convert_to_fuzzy_time($date) . ' / ';
+                        echo $post_['User']['username'];
                         ?>
                     </small>
                   </div>
@@ -93,7 +96,9 @@
       </nav>
     </div><!-- /.blog-main -->
     <?php echo $this->element('sidebar'); ?>
-
+    <div class="mx-auto mt-5">
+      <?php echo $this->Html->link('-お問い合わせ-', array('controller' => 'contacts', 'action' => 'index'), array('class' => 'text-secondary'));  ?>
+    </div>
   </div><!-- /.row -->
 
 </main><!-- /.container -->

@@ -91,6 +91,7 @@ class PostsController extends AppController
 		$this->set('posts', $this->paginate());
 
 		$this->_poplularityCalculation($post);
+		$this->_setArticlesBeforeAndAfter($id);
 	}
 
 	/**
@@ -120,7 +121,7 @@ class PostsController extends AppController
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->log($this->Post->validationErrors, LOG_DEBUG);
-				$this->_displayValErrorMessage();
+				$this->_displayValErrorMessage($this->Post->validationErrors);
 			}
 		}
 		// セレクトボックスにリストを渡す。
@@ -165,7 +166,7 @@ class PostsController extends AppController
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->log($this->Post->validationErrors, LOG_DEBUG);
-				$this->_displayValErrorMessage();
+				$this->_displayValErrorMessage($this->Post->validationErrors);
 			}
 		}
 
@@ -206,7 +207,7 @@ class PostsController extends AppController
 				'plugin' => 'BoostCake',
 				'class' => 'alert-danger'
 			));
-			$this->_displayValErrorMessage();
+			$this->_displayValErrorMessage($this->Post->validationErrors);
 		} else {
 			$this->Session->setFlash(__('記事を削除しました。'), 'alert', array(
 				'plugin' => 'BoostCake',
@@ -254,22 +255,6 @@ class PostsController extends AppController
 
 		// 削除する
 		$this->_deleteImages($id);
-	}
-
-	// バリテーション エラーを全て表示する。
-	public function _displayValErrorMessage()
-	{
-		$validationErrors = $this->Post->validationErrors;
-		foreach ($validationErrors as $valErrors) {
-			foreach ($valErrors as $valError) {
-				// バリテーション エラーが無ければ表示しない
-				if ($valError === '') return;
-				$this->Session->setFlash(__($valError), 'alert', array(
-					'plugin' => 'BoostCake',
-					'class' => 'alert-danger'
-				));
-			}
-		}
 	}
 
 	// ファイルの数だけファイルのデータをattachmentsテーブルに挿入する。
@@ -421,6 +406,22 @@ class PostsController extends AppController
 		$this->set(compact('tableList'));
 	}
 
+	public function _setArticlesBeforeAndAfter($id)
+	{
+		$posts = $this->Post->find('list'); //idの連想配列を取得
+
+		$ids = array_keys($posts); //連想配列を単純な配列に変換
+		$idx = array_search($id, $ids); //記事IDが配列の何番目かを取得
+		debug($ids[$idx - 1]);
+
+		$option = array('conditions' => array('Post.id' => $ids[$idx + 1]), 'recursive' => -1);
+		$afterArticle = $this->Post->find('first', $option);
+		$option = array('conditions' => array('Post.id' => $ids[$idx + -1]), 'recursive' => -1);
+		$beforeArticle = $this->Post->find('first', $option);
+
+		$this->set('nextArticle', $afterArticle);
+		$this->set('prevArticle', $beforeArticle);
+	}
 
 	public function _setRelatedArticle($post)
 	{
